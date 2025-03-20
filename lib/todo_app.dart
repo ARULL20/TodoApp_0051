@@ -140,6 +140,37 @@ minDateTime: DateTime.now(),
                 ],
               ),
             ),
+             SizedBox(height: 20),
+            // Menambahkan judul List Task
+            Text(
+              "List Tasks",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            SizedBox(height: 10),
+            Expanded(
+              child: ListView.builder(
+                itemCount: daftarTask.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    elevation: 3,
+                    margin: EdgeInsets.symmetric(vertical: 5),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                daftarTask[index]["task"],
+                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+
 
 
 
