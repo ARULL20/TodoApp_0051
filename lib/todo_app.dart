@@ -170,6 +170,11 @@ minDateTime: DateTime.now(),
                                 daftarTask[index]["task"],
                                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                               ),
+                              Text(
+                                "Deadline: ${daftarTask[index]["deadline"]!.day}-${daftarTask[index]["deadline"]!.month}-${daftarTask[index]["deadline"]!.year} ${daftarTask[index]["deadline"]!.hour}:${daftarTask[index]["deadline"]!.minute}",
+                                style: TextStyle(fontSize: 14, color: Colors.grey[700]),
+                              ),
+
 
 
 
