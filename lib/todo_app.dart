@@ -86,5 +86,20 @@ minDateTime: DateTime.now(),
                       "Deadline :",
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
+                    Text(
+                      selectedDate != null
+                          ? "${selectedDate!.day}-${selectedDate!.month}-${selectedDate!.year} ${selectedDate!.hour}:${selectedDate!.minute}"
+                          : "Pilih Deadline",
+                      style: TextStyle(fontSize: 18, color: const Color.fromARGB(255, 73, 74, 73)),
+                    ),
+                  ],
+                ),
+                IconButton(
+                  icon: Icon(Icons.date_range, color: Color.fromARGB(174, 4, 158, 193), size: 35),
+                  onPressed: _showDatePicker,
+                ),
+              ],
+            ),
+
 
 
