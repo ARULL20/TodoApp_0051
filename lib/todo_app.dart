@@ -100,6 +100,29 @@ minDateTime: DateTime.now(),
                 ),
               ],
             ),
+             SizedBox(height: 20),
+            Form(
+              key: key,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextFormField(
+                      controller: taskController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Task masih kosong";
+                        }
+                        return null;
+                      },
+                      autovalidateMode: _autoValidate,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Task",
+                        hintText: "Masukkan Task",
+                      ),
+                    ),
+                  ),
+
 
 
 
