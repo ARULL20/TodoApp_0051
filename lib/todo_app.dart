@@ -7,3 +7,18 @@ class TodoApp extends StatefulWidget {
   @override
   State<TodoApp> createState() => _TodoAppState();
 }
+class _TodoAppState extends State<TodoApp> {
+  final TextEditingController taskController = TextEditingController();
+  final GlobalKey<FormState> key = GlobalKey<FormState>();
+  DateTime? selectedDate;
+  List<Map<String, dynamic>> daftarTask = [];
+  AutovalidateMode _autoValidate = AutovalidateMode.disabled;
+
+  void addTask() {
+    if (selectedDate == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Silakan pilih deadline terlebih dahulu!")),
+      );
+      return;
+    }
+
