@@ -207,6 +207,13 @@ minDateTime: DateTime.now(),
     );
   }
 }
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: TodoApp(),
+  ));
+}
+
 
 
 
