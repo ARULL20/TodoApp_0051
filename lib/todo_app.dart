@@ -29,3 +29,8 @@ class _TodoAppState extends State<TodoApp> {
           "deadline": selectedDate,
           "status": false,
         });
+
+         taskController.clear();
+        selectedDate = null;
+        _autoValidate = AutovalidateMode.disabled;
+      });
