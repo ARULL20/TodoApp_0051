@@ -122,6 +122,25 @@ minDateTime: DateTime.now(),
                       ),
                     ),
                   ),
+                   SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: () {
+                      if (key.currentState!.validate()) {
+                        addTask();
+                      }
+                    },
+                    child: Text(
+                      "Simpan",
+                      style: TextStyle(color: Color.fromARGB(255, 252, 252, 252), fontWeight: FontWeight.bold),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 3, 180, 234)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
 
 
 
