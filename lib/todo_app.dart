@@ -37,4 +37,9 @@ class _TodoAppState extends State<TodoApp> {
  ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Task berhasil ditambahkan!")),
       );
+    }else {
+      setState(() {
+        _autoValidate = AutovalidateMode.onUserInteraction;
+      });
     }
+  }
