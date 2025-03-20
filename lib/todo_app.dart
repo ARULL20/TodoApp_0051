@@ -49,3 +49,8 @@ void _showDatePicker(){
         'Pilih Tanggal & Waktu Deadline',
         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black),
       ),
+       onSubmit: (date) {
+        setState(() {
+          selectedDate = date;
+        });
+
