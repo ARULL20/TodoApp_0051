@@ -43,4 +43,9 @@ class _TodoAppState extends State<TodoApp> {
       });
     }
   }
-void _showDatePicker()
+void _showDatePicker(){
+    BottomPicker.dateTime(
+      pickerTitle: Text(
+        'Pilih Tanggal & Waktu Deadline',
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.black),
+      ),
