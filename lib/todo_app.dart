@@ -174,6 +174,19 @@ minDateTime: DateTime.now(),
                                 "Deadline: ${daftarTask[index]["deadline"]!.day}-${daftarTask[index]["deadline"]!.month}-${daftarTask[index]["deadline"]!.year} ${daftarTask[index]["deadline"]!.hour}:${daftarTask[index]["deadline"]!.minute}",
                                 style: TextStyle(fontSize: 14, color: Colors.grey[700]),
                               ),
+                              Text(
+                                daftarTask[index]["status"] ? "Done" : "Not Done",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: daftarTask[index]["status"]
+                                      ? Color.fromARGB(255, 62, 227, 12)
+                                      : Colors.red,
+                                ),
+                              ),
+                            ],
+                          ),
+
 
 
 
