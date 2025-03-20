@@ -186,6 +186,27 @@ minDateTime: DateTime.now(),
                               ),
                             ],
                           ),
+                          Checkbox(
+                            value: daftarTask[index]["status"],
+                            onChanged: (bool? value) {
+                              setState(() {
+                                daftarTask[index]["status"] = value!;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 
 
