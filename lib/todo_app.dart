@@ -53,4 +53,8 @@ void _showDatePicker(){
         setState(() {
           selectedDate = date;
         });
+ },
+      onCloseButtonPressed: () {
+        print('Picker closed');
+      },
 
